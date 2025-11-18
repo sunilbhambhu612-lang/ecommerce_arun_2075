@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulse Threads | Cart</title>
+    <link rel="stylesheet" href="css/cartPage.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">Pulse Threads</div>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="mens.html">Mens</a>
+            <a href="womens.html">Womens</a>
+            <a href="kids.html">Kids</a>
+            <a href="discounts.html">Discounts</a>
+        </nav>
+        <a class="cart active" href="cart.html">
+            Cart <span data-cart-count aria-live="polite">0</span>
+        </a>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <h1>Your cart</h1>
+            <p>Review picks from every capsule in one place.</p>
+        </section>
+
+        <section class="cart-details">
+            <ul data-cart-items aria-live="polite"></ul>
+            <div class="cart-actions">
+                <button type="button" data-clear-cart>Clear cart</button>
+                <a href="index.html">Continue shopping</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Pulse Threads. Secure checkout launching soon.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
