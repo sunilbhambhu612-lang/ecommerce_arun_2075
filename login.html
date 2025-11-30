@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Pulse Threads</title>
+    <link rel="stylesheet" href="css/HomePage.css">
+</head>
+
+<body>
+<header class="site-header">
+    <div class="logo">Pulse Threads</div>
+    <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="mens.html">Mens</a>
+        <a href="womens.html">Womens</a>
+        <a href="kids.html">Kids</a>
+        <a href="discounts.html">Discounts</a>
+    </nav>
+</header>
+
+<main style="padding:4rem 5%;max-width:400px;margin:auto;">
+    <h2 style="margin-bottom:1rem;">Login</h2>
+
+    <input id="usernameInput" type="text" placeholder="Username" style="width:100%;padding:0.8rem;margin-bottom:1rem;border-radius:8px;border:1px solid #ccc;">
+    <input id="passwordInput" type="password" placeholder="Password" style="width:100%;padding:0.8rem;margin-bottom:1rem;border-radius:8px;border:1px solid #ccc;">
+
+    <button id="loginBtn" style="width:100%;padding:0.9rem;background:#f97316;color:white;border:none;border-radius:8px;font-weight:600;">Login</button>
+
+    <p id="loginMsg" style="margin-top:1rem;color:red;"></p>
+</main>
+
+<script>
+document.getElementById("loginBtn").addEventListener("click", () => {
+    const u = document.getElementById("usernameInput").value.trim();
+    const p = document.getElementById("passwordInput").value.trim();
+
+    if (u === "" || p === "") {
+        document.getElementById("loginMsg").textContent = "Enter username and password";
+        return;
+    }
+
+    localStorage.setItem("PulseUser", JSON.stringify({ username: u, password: p, loggedIn: true }));
+    window.location.href = "index.html";
+});
+</script>
+</body>
+</html>
